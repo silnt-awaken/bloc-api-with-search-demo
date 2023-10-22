@@ -1,16 +1,46 @@
-# simpsons_demo
+# Flutter Assessment - Simpsons Demo
 
-A new Flutter project.
+## Overview
 
-## Getting Started
+This project is a Flutter-based application that demonstrates the use of Bloc for state management and data manipulation. The app fetches and displays data from two different sources, the Simpsons and the Wire. It provides search functionality and is responsive, adapting to both phone and tablet layouts.
 
-This project is a starting point for a Flutter application.
+## Essential Components
 
-A few resources to get you started if this is your first Flutter project:
+### State Management
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Bloc**: The project heavily relies on the Bloc pattern for state management. `DataSourceBloc` and `SearchBloc` are the core blocs that handle most of the logic.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Data Sources
+
+- **SimpsonsDataSourceImpl**: Fetches data related to the Simpsons characters.
+- **WireDataSourceImpl**: Fetches data related to the Wire characters.
+
+### UI
+
+- **DeviceLayout**: A custom widget to adapt the layout based on the device type (phone/tablet).
+- **SearchView**: Provides a search bar and displays the filtered list of characters.
+- **DetailView**: Shows detailed information about a selected character.
+
+## How to Run The App
+
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `flutter pub get` to install dependencies.
+4. Execute `flutter run` to start the application.
+
+```bash
+git clone <repository_url>
+cd <project_directory>
+flutter pub get
+flutter run
+```
+
+## How to Run Tests
+
+1. Navigate to the project directory.
+2. Run `flutter test` to execute all tests.
+
+```bash
+cd <project_directory>
+flutter test test/bloc_tests.dart
+```
